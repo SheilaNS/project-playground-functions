@@ -1,0 +1,162 @@
+{
+  "requirements": [
+    { 
+      "description": "1 - Crie uma função usando o operador &&",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "da985e32-f9fa-43f4-9289-06adb5bd0585"
+      ]
+    },
+    { 
+      "description": "2 - Crie uma função que calcule a área do triângulo",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "e77ffcf3-5355-437b-8369-36b7908866ab"
+      ]
+    },
+    { 
+      "description": "3 - Crie uma função que divida a frase",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "01fa83e5-198e-45bd-bedf-a4b9d05a41f6"
+      ]
+    },
+    { 
+      "description": "4 - Crie uma função que use concatenação de strings",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "8ecd99d9-ca97-41b6-9e66-a72aa22aa7ca",
+        "e744b440-f7e6-4965-bcdc-fdf295134c6d"
+      ]
+    },
+    { 
+      "description": "5 - Crie uma função que calcule a quantidade de pontos no futebol",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "e77ffcf3-5355-437b-8369-36b7908866ab"
+      ]
+    },
+    { 
+      "description": "6 - Crie uma função que calcule a repetição do maior número",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "44bc64e4-1dd0-4fe4-a575-e1fe96848bd4",
+        "e51df440-90ee-42e8-be83-1c02e2c06489",
+        "8ecd99d9-ca97-41b6-9e66-a72aa22aa7ca",
+        "e744b440-f7e6-4965-bcdc-fdf295134c6d",
+        "1fb4e5cd-fab5-46e6-b4d6-19576551bc78"
+      ]
+    },
+    { 
+      "description": "7 - Crie uma função de Caça ao rato",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "e77ffcf3-5355-437b-8369-36b7908866ab",
+        "e51df440-90ee-42e8-be83-1c02e2c06489",
+        "d5d2c702-2484-46da-bfd8-58eab37070c8"
+      ]
+    },
+    { 
+      "description": "8 - Crie uma função FizzBuzz",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "44bc64e4-1dd0-4fe4-a575-e1fe96848bd4",
+        "acc8d398-51b2-4f61-97a9-cdc87c89ca8f",
+        "e51df440-90ee-42e8-be83-1c02e2c06489",
+        "d5d2c702-2484-46da-bfd8-58eab37070c8",
+        "1fb4e5cd-fab5-46e6-b4d6-19576551bc78"
+      ]
+    },
+    { 
+      "description": "9 - Crie uma função que Codifique e Decodifique",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "44bc64e4-1dd0-4fe4-a575-e1fe96848bd4",
+        "8ecd99d9-ca97-41b6-9e66-a72aa22aa7ca",
+        "e744b440-f7e6-4965-bcdc-fdf295134c6d",
+        "1fb4e5cd-fab5-46e6-b4d6-19576551bc78"
+      ]
+    },
+    { 
+      "description": "10 - Crie uma função de Lista de tecnologias",
+      "bonus": false,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "e51df440-90ee-42e8-be83-1c02e2c06489",
+        "d8b4836c-331d-4bb9-b37c-d4f5880dcb95",
+        "e744b440-f7e6-4965-bcdc-fdf295134c6d",
+        "1fb4e5cd-fab5-46e6-b4d6-19576551bc78"
+      ]
+    },
+    { 
+      "description": "11 - Crie uma função de Número de telefone",
+      "bonus": true,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "44bc64e4-1dd0-4fe4-a575-e1fe96848bd4",
+        "e51df440-90ee-42e8-be83-1c02e2c06489",
+        "ccd1d063-d32d-49f2-9994-0f2cc09d3a25",
+        "943b803d-dd2b-4630-9cb2-2b1f6dd5b79b",
+        "bd9e7ce5-85e1-4240-a69c-9330d91943f9",
+        "8ecd99d9-ca97-41b6-9e66-a72aa22aa7ca",
+        "e744b440-f7e6-4965-bcdc-fdf295134c6d",
+        "1fb4e5cd-fab5-46e6-b4d6-19576551bc78"
+      ]
+    },
+    { 
+      "description": "12 - Crie uma função de Condição de existência de um triângulo",
+      "bonus": true,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "e77ffcf3-5355-437b-8369-36b7908866ab",
+        "ccd1d063-d32d-49f2-9994-0f2cc09d3a25",
+        "bd9e7ce5-85e1-4240-a69c-9330d91943f9"
+      ]
+    },
+    { 
+      "description": "13 - Crie uma função de Bem vindo ao Bar da Trybe!",
+      "bonus": true,
+      "skill_ids":[
+        "76d994c3-5c9f-4ae9-a0d2-0f6e2a6bd9b2",
+        "915bdacd-f80f-49ac-85e5-6a1abb58ebf8",
+        "ae43092c-fdcb-43ea-83f9-57f1118e6d23",
+        "44bc64e4-1dd0-4fe4-a575-e1fe96848bd4",
+        "e51df440-90ee-42e8-be83-1c02e2c06489",
+        "1fb4e5cd-fab5-46e6-b4d6-19576551bc78"
+      ]
+    }
+  ]
+}
