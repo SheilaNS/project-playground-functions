@@ -20,8 +20,17 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayPalavras) {
+  let ultimoPrimeiro = "";
+  for (let i = arrayPalavras.length; i >= 0; i--) {
+    if (i === arrayPalavras.length - 1) {
+      ultimoPrimeiro += arrayPalavras[i];
+    }
+    if (i === 0) {
+      ultimoPrimeiro += ", " + arrayPalavras[i];
+    }
+  }
+  return ultimoPrimeiro;
 }
 
 // Desafio 5
