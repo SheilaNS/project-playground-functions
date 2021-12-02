@@ -22,7 +22,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(arrayPalavras) {
   let ultimoPrimeiro = "";
-  for (let i = arrayPalavras.length; i >= 0; i--) {
+  for (let i = arrayPalavras.length; i >= 0; i -= 1) {
     if (i === arrayPalavras.length - 1) {
       ultimoPrimeiro += arrayPalavras[i];
     }
@@ -38,10 +38,10 @@ function footballPoints(wins, ties) {
   let pointsWin = 0;
   let pointsTie = 0;
   let totalPoints = 0;
-  for (let i = 0; i < wins; i++) {
+  for (let i = 0; i < wins; i += 1) {
     pointsWin += 3;
   }
-  for (let i = 0; i < ties; i++) {
+  for (let i = 0; i < ties; i += 1) {
     pointsTie += 1;
   }
   totalPoints = pointsWin + pointsTie;
@@ -49,8 +49,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maior = numeros[0];
+  let contador = 0;
+  for (i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] > maior) {
+      maior = numeros[i];
+    }
+  }
+  for (i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] === maior) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
