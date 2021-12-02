@@ -104,11 +104,13 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codifica) {
+  let codificado = codifica.replaceAll('a', '1').replaceAll('e', '2').replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+  return codificado;
 }
-function decode() {
-  // seu código aqui
+function decode(descodifica) {
+  let descodificado = descodifica.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+  return descodificado;
 }
 
 module.exports = {
