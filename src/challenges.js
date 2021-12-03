@@ -3,7 +3,7 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -66,7 +66,8 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = 0, distanciaCat2 = 0;
+  let distanciaCat1 = 0;
+  let distanciaCat2 = 0;
   if (mouse > cat1) {
     distanciaCat1 = mouse - cat1;
   } else { 
@@ -90,14 +91,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumeros) {
   let arrayFB = [];
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 != 0) {
-      arrayFB.push("fizz");
-    } else if (arrayNumeros[i] % 5 === 0 && arrayNumeros[i] % 3 != 0) {
-      arrayFB.push("buzz");
-    } else if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 ===0) {
-      arrayFB.push("fizzBuzz");
+    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 !== 0) {
+      arrayFB.push('fizz');
+    } else if (arrayNumeros[i] % 5 === 0 && arrayNumeros[i] % 3 !== 0) {
+      arrayFB.push('buzz');
+    } else if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+      arrayFB.push('fizzBuzz');
     } else {
-      arrayFB.push("bug!");
+      arrayFB.push('bug!');
     }
   }
   return arrayFB;
