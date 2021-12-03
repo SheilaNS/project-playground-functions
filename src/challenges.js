@@ -36,15 +36,13 @@ function concatName(arrayPalavras) {
 function footballPoints(wins, ties) {
   let pointsWin = 0;
   let pointsTie = 0;
-  let totalPoints = 0;
   for (let i = 0; i < wins; i += 1) {
     pointsWin += 3;
   }
   for (let i = 0; i < ties; i += 1) {
     pointsTie += 1;
   }
-  totalPoints = pointsWin + pointsTie;
-  return totalPoints;
+  return pointsWin + pointsTie;
 }
 
 // Desafio 6
