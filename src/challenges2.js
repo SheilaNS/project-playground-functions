@@ -160,16 +160,16 @@ function verificaZeroNove(array) {
 
 function verificaNumeros(array) {
   if (
-    verifica1(array) ||
-    verifica2(array) ||
-    verifica3(array) ||
-    verifica4(array) ||
-    verifica5(array) ||
-    verifica6(array) ||
-    verifica7(array) ||
-    verifica8(array) ||
-    verifica9(array) ||
-    verifica0(array)
+    verifica1(array)
+    || verifica2(array)
+    || verifica3(array)
+    || verifica4(array)
+    || verifica5(array)
+    || verifica6(array)
+    || verifica7(array)
+    || verifica8(array)
+    || verifica9(array)
+    || verifica0(array)
   ) {
     return 1;
   }
@@ -227,15 +227,15 @@ function hydrate(bebidas) {
 
   for (let contado of palavra) {
     if (
-      parseInt(contado) === 1 ||
-      parseInt(contado) === 2 ||
-      parseInt(contado) === 3 ||
-      parseInt(contado) === 4 ||
-      parseInt(contado) === 5 ||
-      parseInt(contado) === 6 ||
-      parseInt(contado) === 7 ||
-      parseInt(contado) === 8 ||
-      parseInt(contado) === 9
+      parseInt(contado, 10) === 1
+      || parseInt(contado, 10) === 2
+      || parseInt(contado, 10) === 3
+      || parseInt(contado, 10) === 4
+      || parseInt(contado, 10) === 5
+      || parseInt(contado, 10) === 6
+      || parseInt(contado, 10) === 7
+      || parseInt(contado, 10) === 8
+      || parseInt(contado, 10) === 9
     ) {
       qtdBebidas.push(parseInt(contado));
     }
@@ -243,38 +243,38 @@ function hydrate(bebidas) {
 
   for (let total of qtdBebidas) {
     if (total === 1) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 2) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 3) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 4) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 5) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 6) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 7) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 8) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
     if (total === 9) {
-      totalBebidas = totalBebidas + 1 * total;
+      totalBebidas = totalBebidas + (1 * total);
     }
   }
   if (totalBebidas === 1) {
-    qtdAgua = totalBebidas + ' copo de água';
+    qtdAgua = `${totalBebidas} copo de água`;
   }
   if (totalBebidas > 1) {
-    qtdAgua = totalBebidas + ' copos de água';
+    qtdAgua = `${totalBebidas} copos de água`;
   }
   return qtdAgua;
 }
