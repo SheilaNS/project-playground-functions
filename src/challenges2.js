@@ -218,13 +218,9 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Desafio 13
-function hydrate(bebidas) {
-  let qtdBebidas = [];
-  let qtdAgua = '';
-  let palavra = bebidas.split(' ');
-  let totalBebidas = 0;
-
+function contaBebidas(array) {
+  let palavra = array.split(' ');
+  let contaBebidas = [];
   for (let contado of palavra) {
     if (
       parseInt(contado, 10) === 1
@@ -237,9 +233,18 @@ function hydrate(bebidas) {
       || parseInt(contado, 10) === 8
       || parseInt(contado, 10) === 9
     ) {
-      qtdBebidas.push(parseInt(contado));
+      contaBebidas.push(parseInt(contado, 10));
     }
   }
+  return contaBebidas;
+}
+
+// Desafio 13
+function hydrate(bebidas) {
+  let qtdAgua = '';
+  let totalBebidas = 0;
+  
+  let qtdBebidas = contaBebidas(bebidas);
 
   for (let total of qtdBebidas) {
     if (total === 1) {
@@ -278,8 +283,6 @@ function hydrate(bebidas) {
   }
   return qtdAgua;
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
