@@ -87,15 +87,36 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function divideTresCinco(numero) {
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function divideTres(numero) {
+  if (numero % 3 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function divideCinco(numero) {
+  if (numero % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let arrayFB = [];
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+    if (divideTresCinco(arrayNumeros[i])) {
       arrayFB.push('fizzBuzz');
-    } else if (arrayNumeros[i] % 5 === 0) {
+    } else if (divideCinco(arrayNumeros[i])) {
       arrayFB.push('buzz');
-    } else if (arrayNumeros[i] % 3 === 0) {
+    } else if (divideTres(arrayNumeros[i])) {
       arrayFB.push('fizz');
     } else {
       arrayFB.push('bug!');

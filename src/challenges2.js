@@ -142,36 +142,77 @@ function verifica0(array) {
   return 0;
 }
 
-// Desafio 11
-function generatePhoneNumber(arrayNumeros) {
-  if (arrayNumeros.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  } 
-  for (let numeros of arrayNumeros) {
+function verificaTamanho(array) {
+  if (array.length !== 11) {
+    return 1;
+  }
+  return 0;
+}
+
+function verificaZeroNove(array) {
+  for (let numeros of array) {
     if (numeros < 0 || numeros > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return 1;
     }
   }
-  if (verifica1(arrayNumeros) || verifica2(arrayNumeros) || verifica3(arrayNumeros) || verifica4(arrayNumeros)
-      || verifica5(arrayNumeros) || verifica6(arrayNumeros) || verifica7(arrayNumeros) || verifica8(arrayNumeros)
-      || verifica9(arrayNumeros) || verifica0(arrayNumeros)) {
+  return 0;
+}
+
+function verificaNumeros(array) {
+  if (
+    verifica1(array) ||
+    verifica2(array) ||
+    verifica3(array) ||
+    verifica4(array) ||
+    verifica5(array) ||
+    verifica6(array) ||
+    verifica7(array) ||
+    verifica8(array) ||
+    verifica9(array) ||
+    verifica0(array)
+  ) {
+    return 1;
+  }
+  return 0;
+}
+
+// Desafio 11
+function generatePhoneNumber(arrayNumeros) {
+  if (verificaTamanho(arrayNumeros)) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (verificaZeroNove(arrayNumeros)) {
     return 'não é possível gerar um número de telefone com esses valores';
-  };
-  let numeroString = '(' + arrayNumeros[0] + arrayNumeros[1] + ') ' + arrayNumeros[2] + arrayNumeros[3] + 
-            + arrayNumeros[4] + arrayNumeros[5] + arrayNumeros[6] + '-' + arrayNumeros[7]
-             + arrayNumeros[8] + arrayNumeros[9] + arrayNumeros[10];
+  }
+
+  if (verificaNumeros(arrayNumeros)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  let numeroString = `(${arrayNumeros[0]}${arrayNumeros[1]}) `;
+  numeroString += `${arrayNumeros[2]}${arrayNumeros[3]}${arrayNumeros[4]}`;
+  numeroString += `${arrayNumeros[5]}${arrayNumeros[6]}`;
+  numeroString += `-${arrayNumeros[7]}${arrayNumeros[8]}${arrayNumeros[9]}${arrayNumeros[10]}`;
   return numeroString;
+}
+
+function verificaLado(ladoA, ladoB, ladoC) {
+  if (ladoA < ladoB + ladoC && ladoA > Math.abs(ladoB - ladoC)) {
+    return 1;
+  }
+  return 0;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+  if (verificaLado(lineA, lineB, lineC)) {
     return true;
   }
-  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+  if (verificaLado(lineB, lineA, lineC)) {
     return true;
   }
-  if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)){
+  if (verificaLado(lineC, lineA, lineB)) {
     return true;
   }
   return false;
@@ -185,44 +226,52 @@ function hydrate(bebidas) {
   let totalBebidas = 0;
 
   for (let contado of palavra) {
-    if (parseInt(contado) == '1' || parseInt(contado) == '2' || parseInt(contado) == '3' || parseInt(contado) == '4'
-    || parseInt(contado) == '5' || parseInt(contado) == '6' || parseInt(contado) == '7' || parseInt(contado) == '8'
-    || parseInt(contado) == '9') {
+    if (
+      parseInt(contado) === 1 ||
+      parseInt(contado) === 2 ||
+      parseInt(contado) === 3 ||
+      parseInt(contado) === 4 ||
+      parseInt(contado) === 5 ||
+      parseInt(contado) === 6 ||
+      parseInt(contado) === 7 ||
+      parseInt(contado) === 8 ||
+      parseInt(contado) === 9
+    ) {
       qtdBebidas.push(parseInt(contado));
     }
   }
 
-  for (let total of qtdBebidas){
-    if (total == '1'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '2'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '3'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '4'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '5'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '6'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '7'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '8'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
-    if (total == '9'){
-      totalBebidas = totalBebidas + (1 * total);
-    } 
+  for (let total of qtdBebidas) {
+    if (total === 1) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 2) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 3) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 4) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 5) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 6) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 7) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 8) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
+    if (total === 9) {
+      totalBebidas = totalBebidas + 1 * total;
+    }
   }
-  if (totalBebidas === 1){
-  qtdAgua = totalBebidas + ' copo de água';
+  if (totalBebidas === 1) {
+    qtdAgua = totalBebidas + ' copo de água';
   }
   if (totalBebidas > 1) {
     qtdAgua = totalBebidas + ' copos de água';
