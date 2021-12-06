@@ -26,7 +26,7 @@ function concatName(arrayPalavras) {
       ultimoPrimeiro += arrayPalavras[i];
     }
     if (i === 0) {
-      ultimoPrimeiro += ', ' + arrayPalavras[i];
+      ultimoPrimeiro += `, ${arrayPalavras[i]}`;
     }
   }
   return ultimoPrimeiro;
@@ -45,15 +45,20 @@ function footballPoints(wins, ties) {
   return pointsWin + pointsTie;
 }
 
-// Desafio 6
-function highestCount(numeros) {
-  let maior = numeros[0];
-  let contador = 0;
-  for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] > maior) {
-      maior = numeros[i];
+function achaMaior(array) {
+  let maior = array[0];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > maior) {
+      maior = array[i];
     }
   }
+  return maior;
+}
+
+// Desafio 6
+function highestCount(numeros) {
+  let contador = 0;
+  let maior = achaMaior(numeros);
   for (let i = 0; i < numeros.length; i += 1) {
     if (numeros[i] === maior) {
       contador += 1;
@@ -62,39 +67,36 @@ function highestCount(numeros) {
   return contador;
 }
 
+function distanciaGato(rato, gato) {
+  if (rato > gato) {
+    return rato - gato;
+  }
+  return gato - rato;
+}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = 0;
-  let distanciaCat2 = 0;
-  if (mouse > cat1) {
-    distanciaCat1 = mouse - cat1;
-  } else { 
-    distanciaCat1 = cat1 - mouse;
-  }
-  if (mouse > cat2) {
-    distanciaCat2 = mouse - cat2;
-  } else { 
-    distanciaCat2 = cat2 - mouse;
-  }
+  let distanciaCat1 = distanciaGato(mouse, cat1);
+  let distanciaCat2 = distanciaGato(mouse, cat2);
   if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } else if (distanciaCat2 > distanciaCat1) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (distanciaCat2 > distanciaCat1) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let arrayFB = [];
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 !== 0) {
-      arrayFB.push('fizz');
-    } else if (arrayNumeros[i] % 5 === 0 && arrayNumeros[i] % 3 !== 0) {
-      arrayFB.push('buzz');
-    } else if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
       arrayFB.push('fizzBuzz');
+    } else if (arrayNumeros[i] % 5 === 0) {
+      arrayFB.push('buzz');
+    } else if (arrayNumeros[i] % 3 === 0) {
+      arrayFB.push('fizz');
     } else {
       arrayFB.push('bug!');
     }
@@ -104,11 +106,19 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(codifica) {
-  let codificado = codifica.replaceAll('a', '1').replaceAll('e', '2').replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+  let codificado = codifica.replaceAll('a', '1')
+    .replaceAll('e', '2')
+    .replaceAll('i', '3')
+    .replaceAll('o', '4')
+    .replaceAll('u', '5');
   return codificado;
 }
 function decode(descodifica) {
-  let descodificado = descodifica.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+  let descodificado = descodifica.replaceAll('1', 'a')
+    .replaceAll('2', 'e')
+    .replaceAll('3', 'i')
+    .replaceAll('4', 'o')
+    .replaceAll('5', 'u');
   return descodificado;
 }
 
