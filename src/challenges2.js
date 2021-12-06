@@ -220,7 +220,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 function contaBebidas(array) {
   let palavra = array.split(' ');
-  let contaBebidas = [];
+  let contaBebs = [];
   for (let contado of palavra) {
     if (
       parseInt(contado, 10) === 1
@@ -233,17 +233,16 @@ function contaBebidas(array) {
       || parseInt(contado, 10) === 8
       || parseInt(contado, 10) === 9
     ) {
-      contaBebidas.push(parseInt(contado, 10));
+      contaBebs.push(parseInt(contado, 10));
     }
   }
-  return contaBebidas;
+  return contaBebs;
 }
 
 // Desafio 13
 function hydrate(bebidas) {
   let qtdAgua = '';
   let totalBebidas = 0;
-  
   let qtdBebidas = contaBebidas(bebidas);
 
   for (let total of qtdBebidas) {
