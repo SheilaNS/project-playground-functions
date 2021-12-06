@@ -247,31 +247,31 @@ function hydrate(bebidas) {
 
   for (let total of qtdBebidas) {
     if (total === 1) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 2) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 3) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 4) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 5) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 6) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 7) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 8) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
     if (total === 9) {
-      totalBebidas = totalBebidas + (1 * total);
+      totalBebidas += total;
     }
   }
   if (totalBebidas === 1) {
