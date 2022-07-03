@@ -87,43 +87,44 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-function divideTresCinco(numero) {
+function divideTresCinco(numero, array) {
   if (numero % 3 === 0 && numero % 5 === 0) {
-    return true;
+    return array.push('fizzBuzz');
   }
-  return false;
 }
 
-function divideTres(numero) {
-  if (numero % 3 === 0) {
-    return true;
+function divideTres(numero, array) {
+  if (numero % 3 === 0 && numero % 5 !== 0) {
+    return array.push('fizz');
   }
-  return false;
 }
 
-function divideCinco(numero) {
-  if (numero % 5 === 0) {
-    return true;
+function divideCinco(numero, array) {
+  if (numero % 3 !== 0 && numero % 5 === 0) {
+    return array.push('buzz');
   }
-  return false;
+}
+
+function divideNenhum(numero, array) {
+  if (numero % 3 !== 0 && numero % 5 !== 0) {
+    return array.push('bug!');
+  }
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   let arrayFB = [];
   for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (divideTresCinco(arrayNumeros[i])) {
-      arrayFB.push('fizzBuzz');
-    } else if (divideCinco(arrayNumeros[i])) {
-      arrayFB.push('buzz');
-    } else if (divideTres(arrayNumeros[i])) {
-      arrayFB.push('fizz');
-    } else {
-      arrayFB.push('bug!');
-    }
+    divideTresCinco(arrayNumeros[i], arrayFB);
+    divideTres(arrayNumeros[i], arrayFB);
+    divideCinco(arrayNumeros[i], arrayFB);
+    divideNenhum(arrayNumeros[i], arrayFB);
   }
   return arrayFB;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
 
 // Desafio 9
 function encode(codifica) {

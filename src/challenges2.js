@@ -6,7 +6,7 @@ function techList(arrayTechs, name) {
     return 'Vazio!';
   }
   for (let i = 0; i < arrayOrdenada.length; i += 1) {
-    lista.push({ tech: arrayOrdenada[i], name: name });
+    lista.push({ tech: arrayOrdenada[i], name });
   }
 
   return lista;
