@@ -1,147 +1,143 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  }
+  if (param1 && param2) return true;
   return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  return area;
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let palavra = frase.split(' ');
-  return palavra;
+function splitSentence(sentence) {
+  const split = [];
+  let word = '';
+  for (let index in sentence) {
+    if (sentence[index] === ' ' || index === sentence.length) {
+      split.push(word);
+      word = '';
+    } else word += sentence[index];
+  }
+  split.push(word);
+  return split;
+  // return sentence.split(' ');
 }
 
 // Desafio 4
-function concatName(arrayPalavras) {
-  let ultimoPrimeiro = '';
-  for (let i = arrayPalavras.length; i >= 0; i -= 1) {
-    if (i === arrayPalavras.length - 1) {
-      ultimoPrimeiro += arrayPalavras[i];
-    }
-    if (i === 0) {
-      ultimoPrimeiro += `, ${arrayPalavras[i]}`;
-    }
-  }
-  return ultimoPrimeiro;
+function concatName(array) {
+  let result = array[array.length - 1];
+  result += ', ';
+  result += array[0];
+  return result;
+  // return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pointsWin = 0;
-  let pointsTie = 0;
-  for (let i = 0; i < wins; i += 1) {
-    pointsWin += 3;
-  }
-  for (let i = 0; i < ties; i += 1) {
-    pointsTie += 1;
-  }
-  return pointsWin + pointsTie;
-}
-
-function achaMaior(array) {
-  let maior = array[0];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > maior) {
-      maior = array[i];
-    }
-  }
-  return maior;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount(numeros) {
-  let contador = 0;
-  let maior = achaMaior(numeros);
-  for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] === maior) {
-      contador += 1;
-    }
+// verifica qual o maior número do array
+function verifyBiggestNumber(array) {
+  let bigger = array[0];
+  for (let number of array) {
+    if (number > bigger) bigger = number;
   }
-  return contador;
+  return bigger;
+}
+// conta quantas vezes esse número aparece no array
+function countBiggestNumber(array, numb) {
+  let count = 0;
+  for (let number of array) {
+    if (numb === number) count += 1;
+  }
+  return count;
 }
 
-function distanciaGato(rato, gato) {
-  if (rato > gato) {
-    return rato - gato;
-  }
-  return gato - rato;
+function highestCount(array) {
+  let bigger = verifyBiggestNumber(array);
+  return countBiggestNumber(array, bigger);
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = distanciaGato(mouse, cat1);
-  let distanciaCat2 = distanciaGato(mouse, cat2);
-  if (distanciaCat1 > distanciaCat2) {
-    return 'cat2';
-  }
-  if (distanciaCat2 > distanciaCat1) {
-    return 'cat1';
-  }
+  const distCat1 = Math.abs(mouse - cat1);
+  const distCat2 = Math.abs(mouse - cat2);
+  if (distCat1 < distCat2) return 'cat1';
+  if (distCat2 < distCat1) return 'cat2';
   return 'os gatos trombam e o rato foge';
 }
 
-function divideTresCinco(numero, array) {
-  if (numero % 3 === 0 && numero % 5 === 0) {
+// Desafio 8
+function fiveAndThreeModule(numb, array) {
+  if (numb % 3 === 0 && numb % 5 === 0) {
     return array.push('fizzBuzz');
   }
 }
 
-function divideTres(numero, array) {
-  if (numero % 3 === 0 && numero % 5 !== 0) {
+function threeModule(numb, array) {
+  if (numb % 3 === 0 && numb % 5 !== 0) {
     return array.push('fizz');
   }
 }
 
-function divideCinco(numero, array) {
-  if (numero % 3 !== 0 && numero % 5 === 0) {
+function fiveModule(numb, array) {
+  if (numb % 3 !== 0 && numb % 5 === 0) {
     return array.push('buzz');
   }
 }
 
-function divideNenhum(numero, array) {
-  if (numero % 3 !== 0 && numero % 5 !== 0) {
+function nodeModule(numb, array) {
+  if (numb % 3 !== 0 && numb % 5 !== 0) {
     return array.push('bug!');
   }
 }
 
-// Desafio 8
-function fizzBuzz(arrayNumeros) {
-  let arrayFB = [];
-  for (let i = 0; i < arrayNumeros.length; i += 1) {
-    divideTresCinco(arrayNumeros[i], arrayFB);
-    divideTres(arrayNumeros[i], arrayFB);
-    divideCinco(arrayNumeros[i], arrayFB);
-    divideNenhum(arrayNumeros[i], arrayFB);
+function fizzBuzz(array) {
+  const result = [];
+  for (let number of array) {
+    fiveAndThreeModule(number, result);
+    threeModule(number, result);
+    fiveModule(number, result);
+    nodeModule(number, result);
   }
-  return arrayFB;
+  return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-// ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
+// OUTRA FORMA DE FAZER - sem considerar o lint
+
+// function fizzBuzz(array) {
+// const result = [];
+// for (let number of array) {
+//   if (number % 3 === 0 && number % 5 === 0) {
+//     result.push('fizzBuzz');
+//   } else if (number % 3 === 0) {
+//     result.push('fizz');
+//   } else if (number % 5 === 0) {
+//     result.push('buzz');
+//   } else result.push('bug!');
+// }
+// return result;
+// }
 
 // Desafio 9
-function encode(codifica) {
-  let codificado = codifica.replaceAll('a', '1')
+function encode(code) {
+  const coded = code.replaceAll('a', '1')
     .replaceAll('e', '2')
     .replaceAll('i', '3')
     .replaceAll('o', '4')
     .replaceAll('u', '5');
-  return codificado;
+  return coded;
 }
-function decode(descodifica) {
-  let descodificado = descodifica.replaceAll('1', 'a')
+function decode(code) {
+  const decoded = code.replaceAll('1', 'a')
     .replaceAll('2', 'e')
     .replaceAll('3', 'i')
     .replaceAll('4', 'o')
     .replaceAll('5', 'u');
-  return descodificado;
+  return decoded;
 }
 
 module.exports = {
